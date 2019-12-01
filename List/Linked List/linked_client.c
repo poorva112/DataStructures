@@ -16,7 +16,7 @@ int main(){
         printf("5.  Delete a Node\n");
         printf("6.  Delete at a position\n");
         printf("7.  Reverse linked list\n");
-        printf("Any other key to exit\n\n");
+        printf("8.  Exit\n\n");
         scanf("%d",&ch);
 
         switch(ch){

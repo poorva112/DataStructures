@@ -39,6 +39,11 @@ void insert_tail(struct node **p,int x){
 
 
 void delete_node(struct node **p, int x){
+    if(*p == NULL){
+        printf("Empty List\n");
+        return;
+    }
+    
     struct node *q;
 
     q = *p;                      //copy the first nodes address
@@ -68,6 +73,10 @@ void delete_node(struct node **p, int x){
 
 //Deletes node at a specified position x -- 1 to n
 void delete_pos(struct node **p, int x){
+    if(*p == NULL){
+        printf("Empty List\n");
+        return;
+    }
     if(x < 1){
         printf("Invalid Position\n");
         return;

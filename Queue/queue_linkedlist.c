@@ -22,8 +22,8 @@ int main(){
         printf("\n");
         qdisplay(front, rear);
 
-        printf("\n\n1. Insert");
-        printf("\n2. Remove");
+        printf("\n\n1. Enqueue");
+        printf("\n2. Dequeue");
         printf("\n3. Peek/Front");
         printf("\n4. Exit\n\n");
         scanf("%d", &ch);

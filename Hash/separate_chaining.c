@@ -70,31 +70,7 @@ int main(){
     }
 }
   
-
-void search(struct hash *ht, int size, int key){
-    struct node *temp;
-    int index = key %size;
-
-    temp = ht[index].head;
-    // prev = NULL;
-    while((temp != NULL) && (temp->key != key)){
-        // prev = temp;
-        temp = temp->next;
-    }
-
-    if(temp == NULL){
-        printf("------------------------\n");
-        printf("Key not found\n");
-    }
-    
-    else{
-        printf("------------------------\n");
-        printf("\nKey: %d\n", key);
-        printf("Name: %s\n\n", temp->name);
-    }
-}
-
-
+  
 void insert(struct hash* ht, int size, int key, char* name){
     struct node *temp;
     int index;
@@ -140,6 +116,30 @@ void delete(struct hash *ht, int size, int key){
             prev->next = temp->next;
         free(temp);
         ht[index].count--;
+    }
+}
+
+
+void search(struct hash *ht, int size, int key){
+    struct node *temp;
+    int index = key %size;
+
+    temp = ht[index].head;
+    // prev = NULL;
+    while((temp != NULL) && (temp->key != key)){
+        // prev = temp;
+        temp = temp->next;
+    }
+
+    if(temp == NULL){
+        printf("------------------------\n");
+        printf("Key not found\n");
+    }
+    
+    else{
+        printf("------------------------\n");
+        printf("\nKey: %d\n", key);
+        printf("Name: %s\n\n", temp->name);
     }
 }
 

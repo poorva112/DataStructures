@@ -8,8 +8,9 @@ int dequeue(int *, int *, int*);
 int front(int *, int);
 void display(int *, int, int);
 
-int main(){
-  
+//Can use global variables for front and rear variables
+
+int main(){ 
     int *q;
     int ch, k, x;
     int f, r, size;
@@ -96,7 +97,6 @@ void display(int *q, int f, int r){
         printf("\n");
     }
 }
-
 
 /*
 Why do we pass front "f" variable by reference to Enqueue and Dequeue operations?? 

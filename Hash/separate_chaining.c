@@ -55,12 +55,12 @@ int main(){
                     insert(hashtable, tableSize, key, name);
                     break;
 
-            case 2: printf("Enter the key for deletion: ");
+            case 2: printf("Enter key for deletion: ");
                     scanf("%d", &key);
                     delete(hashtable, tableSize, key);
                     break;
 
-            case 3: printf("Enter the key to search: ");
+            case 3: printf("Enter key: ");
                     scanf("%d", &key);
                     search(hashtable, tableSize, key);
                     break;
@@ -70,7 +70,7 @@ int main(){
     }
 }
   
-  
+
 void insert(struct hash* ht, int size, int key, char* name){
     struct node *temp;
     int index;
